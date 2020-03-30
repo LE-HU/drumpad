@@ -20,12 +20,11 @@ const padN = document.querySelector("#padN");
 console.log("ty kurwo bobik");
 
 const playSound = function (obj = this) {
-  console.log(obj);
-  console.log(obj.event);
-  console.log(obj.event.target);
-  obj.event.target.firstElementChild.currentTime = 0;
+  obj.event.target.
+  firstElementChild.currentTime = 0;
   obj.event.target.firstElementChild.play();
-  display.innerText = obj.event.target.firstElementChild.title;
+  display.innerText = obj.event.originalTarget.
+  firstElementChild.title;
   console.log(obj)
 };
 

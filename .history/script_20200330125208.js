@@ -20,12 +20,11 @@ const padN = document.querySelector("#padN");
 console.log("ty kurwo bobik");
 
 const playSound = function (obj = this) {
-  console.log(obj);
-  console.log(obj.event);
-  console.log(obj.event.target);
-  obj.event.target.firstElementChild.currentTime = 0;
-  obj.event.target.firstElementChild.play();
-  display.innerText = obj.event.target.firstElementChild.title;
+  obj.event.originalTarget.
+  firstElementChild.currentTime = 0;
+  obj.event.originalTarget.firstElementChild.play();
+  display.innerText = obj.event.originalTarget.
+  firstElementChild.title;
   console.log(obj)
 };
 
@@ -36,11 +35,6 @@ const playSoundKey = function (obj = this) {
   console.log(obj)
 };
 
-// padQ.addEventListener('click', e => {
-//   padQ.
-//   firstElementChild.currentTime = 0;
-//   e.originalTarget.firstElementChild.play();
-// })
 
 padQ.onclick = () => playSound();
 padW.onclick = () => playSound();
@@ -83,6 +77,7 @@ window.addEventListener('keypress', e => {
   }
   if (e.key == "z" || e.key == "Z") {
     playSoundKey(padZ);
+    e;
   }
   if (e.key == "x" || e.key == "X") {
     playSoundKey(padX);
@@ -110,6 +105,7 @@ window.addEventListener('keypress', e => {
   }
   if (e.key == "v" || e.key == "V") {
     playSoundKey(padV);
+    e;
   }
   if (e.key == "b" || e.key == "B") {
     playSoundKey(padB);
