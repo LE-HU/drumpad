@@ -14,7 +14,7 @@
 }
 
 body {
-  background-color: #000;
+  background-color: var(--ch-darkviolet);
   font-family: 'Roboto', 'Open Sans', sans-serif;
 }
 
@@ -31,12 +31,13 @@ body {
 }
 
 #drum-machine {
+  background-color: #000;
   border: 1px solid #FFF;
   display: grid;
   grid-template-columns: 0.3fr 0.3fr 0.3fr 0.3fr 0.3fr 0.3fr 0.8fr;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas:
-    "Q W E R T Y . "
+    "Q W E R T Y dspl "
     "A S D F G H dspl"
     "Z X C V B N hint";
   align-items: center;
@@ -50,6 +51,7 @@ body {
 .drum-pad {
   background-color: #FFF;
   border: 4px solid var(--ch-yellow);
+  border-radius: 4px;
   font-size: 21px;
   padding: 30px 10px;
 }
@@ -63,12 +65,13 @@ body {
 
 #display {
   border: 2px solid #FFF;
+  border-radius: 4px;
   color: #FFF;
   grid-area: dspl;
   font-size: 21px;
   justify-self: center;
   padding: 30px;
-  width: 120px;
+  width: 125px;
   text-align: center;
 }
 
