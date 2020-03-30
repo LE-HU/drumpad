@@ -24,16 +24,10 @@ const playSound = function (obj = this) {
 };
 
 const playSoundKey = function (obj = this) {
-  obj.firstElementChild.currentTime = 0;
-  obj.firstElementChild.play();
+  obj.click();
+  obj.style.backgroundColor = "lightgray";
   display.innerText = obj.firstElementChild.title;
-};
-
-// padQ.addEventListener('click', e => {
-//   padQ.
-//   firstElementChild.currentTime = 0;
-//   e.originalTarget.firstElementChild.play();
-// })
+}
 
 padQ.onclick = () => playSound();
 padW.onclick = () => playSound();
@@ -54,7 +48,7 @@ padV.onclick = () => playSound();
 padB.onclick = () => playSound();
 padN.onclick = () => playSound();
 
-window.addEventListener('keypress', e => {
+window.addEventListener('keydown', e => {
 
   if (e.key == "q" || e.key == "Q") {
     playSoundKey(padQ);
@@ -109,5 +103,63 @@ window.addEventListener('keypress', e => {
   }
   if (e.key == "n" || e.key == "N") {
     playSoundKey(padN);
+  }
+});
+
+window.addEventListener('keyup', e => {
+
+  if (e.key == "q" || e.key == "Q") {
+    padQ.style.backgroundColor = "";
+  }
+  if (e.key == "w" || e.key == "W") {
+    padW.style.backgroundColor = "";
+  }
+  if (e.key == "e" || e.key == "E") {
+    padE.style.backgroundColor = "";
+  }
+  if (e.key == "a" || e.key == "A") {
+    padA.style.backgroundColor = "";
+  }
+  if (e.key == "s" || e.key == "S") {
+    padS.style.backgroundColor = "";
+  }
+  if (e.key == "d" || e.key == "D") {
+    padD.style.backgroundColor = "";
+  }
+  if (e.key == "z" || e.key == "Z") {
+    padZ.style.backgroundColor = "";
+  }
+  if (e.key == "x" || e.key == "X") {
+    padX.style.backgroundColor = "";
+  }
+  if (e.key == "c" || e.key == "C") {
+    padC.style.backgroundColor = "";
+  }
+  if (e.key == "r" || e.key == "R") {
+    padR.style.backgroundColor = "";
+  }
+  if (e.key == "t" || e.key == "T") {
+    padT.style.backgroundColor = "";
+  }
+  if (e.key == "y" || e.key == "Y") {
+    padY.style.backgroundColor = "";
+  }
+  if (e.key == "f" || e.key == "F") {
+    padF.style.backgroundColor = "";
+  }
+  if (e.key == "g" || e.key == "G") {
+    padG.style.backgroundColor = "";
+  }
+  if (e.key == "h" || e.key == "H") {
+    padH.style.backgroundColor = "";
+  }
+  if (e.key == "v" || e.key == "V") {
+    padV.style.backgroundColor = "";
+  }
+  if (e.key == "b" || e.key == "B") {
+    padB.style.backgroundColor = "";
+  }
+  if (e.key == "n" || e.key == "N") {
+    padN.style.backgroundColor = "";
   }
 });

@@ -15,6 +15,7 @@
 
 body {
   background-color: #000;
+  font-family: 'Roboto', 'Open Sans', sans-serif;
 }
 
 .centered {
@@ -37,7 +38,7 @@ body {
   grid-template-areas:
     "Q W E R T Y . "
     "A S D F G H dspl"
-    "Z X C V B N . ";
+    "Z X C V B N hint";
   align-items: center;
   justify-items: auto;
   gap: 5px;
@@ -56,6 +57,9 @@ body {
 .drum-pad:active {
   background-color: lightgray;
 }
+.drum-pad:active {
+  background-color: lightgray;
+}
 
 #display {
   border: 2px solid #FFF;
@@ -66,6 +70,15 @@ body {
   padding: 30px;
   width: 120px;
   text-align: center;
+}
+
+#hint {
+  color: #fff;
+  grid-area: hint;
+  align-self: end;
+  justify-self: end;
+  font-style: italic;
+  font-size: 14px;
 }
 
 #padQ {
