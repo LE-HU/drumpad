@@ -1,3 +1,5 @@
+console.log("Welcome! Thank you for viewing my drumpad project. ~ le-hu");
+
 const padQ = document.querySelector("#padQ");
 const padW = document.querySelector("#padW");
 const padE = document.querySelector("#padE");
