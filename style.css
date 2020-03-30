@@ -153,3 +153,9 @@ body {
   grid-area: N;
 }
 
+@media (max-width: 800px){
+  .container {
+    width:90%;
+  }
+}
+
