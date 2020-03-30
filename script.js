@@ -17,23 +17,16 @@ const padV = document.querySelector("#padV");
 const padB = document.querySelector("#padB");
 const padN = document.querySelector("#padN");
 
-console.log("ty kurwo bobik");
-
 const playSound = function (obj = this) {
-  console.log(obj);
-  console.log(obj.event);
-  console.log(obj.event.target);
   obj.event.target.firstElementChild.currentTime = 0;
   obj.event.target.firstElementChild.play();
   display.innerText = obj.event.target.firstElementChild.title;
-  console.log(obj)
 };
 
 const playSoundKey = function (obj = this) {
   obj.firstElementChild.currentTime = 0;
   obj.firstElementChild.play();
   display.innerText = obj.firstElementChild.title;
-  console.log(obj)
 };
 
 // padQ.addEventListener('click', e => {

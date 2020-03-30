@@ -1,16 +1,71 @@
+:root {
+  --ch-darkblue: #0c77b0;
+  --ch-darkgray: #57585a;
+  --ch-darkgreen: #08821c;
+  --ch-darkorange: #c45201;
+  --ch-darkviolet: #351b70;
+  --ch-darkyellow: #dca108;
+  --ch-gray: #797a7e;
+  --ch-green: #0db24c;
+  --ch-lightblue: #1ca9e1;
+  --ch-orange: #f48221;
+  --ch-violet: #572f90;
+  --ch-yellow: #fed30a;
+}
+
+body {
+  background-color: #000;
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .container {
   margin: auto;
-  width: 60%;
+  width: 40%;
 }
 
 #drum-machine {
+  border: 1px solid #FFF;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 0.3fr 0.3fr 0.3fr 0.3fr 0.3fr 0.3fr 0.8fr;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas:
-    "Q W E R T Y. ."
-    "A S D F G H dspl dspl"
-    "Z X C V B N. .";
+    "Q W E R T Y . "
+    "A S D F G H dspl"
+    "Z X C V B N . ";
+  align-items: center;
+  justify-items: auto;
+  gap: 5px;
+  padding: 5px;
+  border-radius: 6px;
+  box-shadow: 1px 1px #FFF, 2px 2px #FFF, 3px 3px #FFF, 4px 4px #FFF;
+}
+
+.drum-pad {
+  background-color: #FFF;
+  border: 4px solid var(--ch-yellow);
+  font-size: 21px;
+  padding: 30px 10px;
+}
+
+.drum-pad:active {
+  background-color: lightgray;
+}
+
+#display {
+  border: 2px solid #FFF;
+  color: #FFF;
+  grid-area: dspl;
+  font-size: 21px;
+  justify-self: center;
+  padding: 30px;
+  width: 120px;
+  text-align: center;
 }
 
 #padQ {
@@ -24,6 +79,7 @@
 #padE {
   grid-area: E;
 }
+
 #padA {
   grid-area: A;
 }
@@ -84,6 +140,3 @@
   grid-area: N;
 }
 
-#display {
-  grid-area: dspl;
-}
